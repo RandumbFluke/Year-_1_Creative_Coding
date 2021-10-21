@@ -31,6 +31,16 @@ function drawShape(rectangleWidth,rectangleHeight){
 function draw(){
   noFill();
   drawShape(rectWidth,rectHeight);
+  //rectangle
   rectMode(CENTER);
   rect(100,100,20,100);
+  //circle
+  ellipse(100,70,60,60);
+  ellipse(81,70,16,16);
+  ellipse(119,70,16,16);
+  line(90,120,80,105);
+  line(110,120,120,105);
+  line(90,150,80,160);
+  line(110,150,120,160);
+
 }
