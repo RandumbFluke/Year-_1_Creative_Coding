@@ -5,7 +5,7 @@ function setup() {
   createCanvas(1920,1080);
   background(255);
   //background colour 0 for black, 255 for white
-  noLoop();
+  //noLoop();
 }
 
 function draw() {
@@ -22,19 +22,29 @@ function draw() {
 
 }
 
+function drawShape(ellipseWidth,ellipseHeight){
+  let xPos = random(0, width);
+  let yPos = random(0, height);
+  ellipse(xPos,yPos,ellipseWidth,ellipseHeight);
+}
+
 function drawShape(rectangleWidth,rectangleHeight){
   let xPos = random(0, width);
   let yPos = random(0, height);
   rect(xPos,yPos,rectangleWidth,rectangleHeight);
+
 }
 
+
+//random spawn for shape and random colour
 function draw(){
-  noFill();
+  fill(random(0,255),random(0,255),random(0,255));
   drawShape(rectWidth,rectHeight);
-  //rectangle
+  drawShape(ellipseWidth,ellipseHeight);
+
+  //weird alien drawing
   rectMode(CENTER);
   rect(100,100,20,100);
-  //circle
   ellipse(100,70,60,60);
   ellipse(81,70,16,16);
   ellipse(119,70,16,16);
