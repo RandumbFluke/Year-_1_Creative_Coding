@@ -73,7 +73,7 @@
 //}
 
 let x;
-//let easing = 0.01;
+let BGcolour = 0;
 
 function setup(){
   createCanvas(480,480);
@@ -81,21 +81,36 @@ function setup(){
 }
 
 function draw(){
-  background(204);
+     //Background change colour on mouse click
+  //if (mouseIsPressed){
+    //background(23,45,72);
+  //}
+  //else {
+    //background(212,156,17);
+  //}
+  background (BGcolour);
+  fill(36,72,201);
   line(x,0,x,height);
-  //x += (targetX - x) * easing;
+
+
   
   if (mouseX > x){
-    x = x + 1
+    x = x + 1;
     console.log("Mouse is right of the line");
   }
   else if (mouseX < x){
-    x = x - 1
+    x = x - 1;
     console.log("Mouse is left of the line");
   }
 
-  else (mouseX = x){
+  if (mouseX == x){
     console.log ("Mouse is on the line");
   }
 
+}
+
+function mouseMoved(){
+  //BGcolour = BGcolour + 1;
+  //if (BGcolour > 255){
+  BGcolour = mouseX;
 }
