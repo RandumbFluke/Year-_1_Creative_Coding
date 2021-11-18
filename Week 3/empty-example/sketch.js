@@ -24,25 +24,25 @@
 
 
         //Drawing with easing 
-//let x = 0;
-//let y = 0;
-//let easing = 0.01;
+let x = 0;
+let y = 0;
+let easing = 0.01;
 
 
 
-//function setup(){
-  //createCanvas(480,480);
-//}
+function setup(){
+  createCanvas(480,480);
+}
 
-//function draw(){
-  //let targetX = mouseX;
-  //let targetY = mouseY
-  //x += (targetX - x) * easing;
-  //y += (targetY - y) * easing;
-  //ellipse(x, y, 12, 12);
-  //console.log(targetX + " : " + x);
-  //console.log(targetY + " : " + y);
-//}
+function draw(){
+  let targetX = mouseX;
+  let targetY = mouseY
+  x += (targetX - x) * easing;
+  y += (targetY - y) * easing;
+  ellipse(x, y, 12, 12);
+  console.log(targetX + " : " + x);
+  console.log(targetY + " : " + y);
+}
 
 
        //conditionals
@@ -72,15 +72,18 @@
   //line(0,70,width,50);
 //}
 
-let x;
-let BGcolour = 0;
 
-function setup(){
-  createCanvas(480,480);
-  x = width/2;
-}
+//Final task
 
-function draw(){
+//let x;
+//let BGcolour = 0;
+
+//function setup(){
+  //createCanvas(480,480);
+  //x = width/2;
+//}
+
+//function draw(){
      //Background change colour on mouse click
   //if (mouseIsPressed){
     //background(23,45,72);
@@ -88,29 +91,29 @@ function draw(){
   //else {
     //background(212,156,17);
   //}
-  background (BGcolour);
-  fill(36,72,201);
-  line(x,0,x,height);
+  //background (BGcolour);
+  //fill(36,72,201);
+  //line(x,0,x,height);
 
 
   
-  if (mouseX > x){
-    x = x + 1;
-    console.log("Mouse is right of the line");
-  }
-  else if (mouseX < x){
-    x = x - 1;
-    console.log("Mouse is left of the line");
-  }
+  //if (mouseX > x){
+    //x = x + 1;
+    //console.log("Mouse is right of the line");
+  //}
+  //else if (mouseX < x){
+    //x = x - 1;
+    //console.log("Mouse is left of the line");
+  //}
 
-  if (mouseX == x){
-    console.log ("Mouse is on the line");
-  }
+  //if (mouseX == x){
+    //console.log ("Mouse is on the line");
+  //}
 
-}
+//}
 
-function mouseMoved(){
+//function mouseMoved(){
   //BGcolour = BGcolour + 1;
   //if (BGcolour > 255){
-  BGcolour = mouseX;
-}
+  //BGcolour = mouseX;
+//}
