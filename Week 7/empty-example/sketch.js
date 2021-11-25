@@ -15,6 +15,12 @@ function setup() {
 }
 
 function draw() {
+  //vapour trail
+  noStroke();
+  rectMode(CORNER);
+  fill(255,255,255,80);//white 80 on the alpha channel
+  rect(0,0,width,height);
+  //
   move();
   display();
 }
@@ -26,7 +32,7 @@ function move(){
     xDir = xDir * -1; //flips between positive and negative 1
   }
   if(y > (height-size) || y < size){
-    yDir = yDir * -1 //flips between positive and negative 1
+    yDir = yDir * -1; //flips between positive and negative 1
   }
 }
 
