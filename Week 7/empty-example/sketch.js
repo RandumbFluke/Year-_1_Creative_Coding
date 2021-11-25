@@ -19,10 +19,11 @@ function setup() {
   xDir = 1;
   yDir = 1;
   //shapey
-  shapey1 = new MovingShape();
-  shapey2 = new MovingShape();
+  //shapey1 = new MovingShape();
+ // shapey2 = new MovingShape();
   //circle
-  circ = new MovingCircle();
+  circ = new MovingCircle(random(0,width),random(0,height),random(1,40));
+
   //array
   for(let i = 0; i < 200; i++){
     shapeArr.push(new MovingShape(random(0,width),random(0,height),random(1,40))); //add a new MovingShape to our array each loop at random pos and with random size
@@ -39,10 +40,10 @@ function draw() {
   move();
   display();
   //shapey1
-  shapey1.move();
-  shapey1.display();
-  shapey2.move();
-  shapey2.display();
+  //shapey1.move();
+  //shapey1.display();
+  //shapey2.move();
+  //shapey2.display();
   //circle
   circ.move();
   circ.display();
@@ -73,13 +74,15 @@ function display(){
 
 class MovingShape{
   constructor(startX,startY,startSize){
+
+    console.log(startSize);
   this.x = startX;
   this.y = startY;
   this.size = startSize;
   //
   this.x = width/2; //middle
   this.y = height/2; //centre
-  this.size = 10;
+  //this.size = 10;
   this.xSpeed = random(0.3,5);
   this.ySpeed = random(0.3,5);
   this.xDir = 1;
@@ -108,7 +111,7 @@ class MovingShape{
 }
 
 class MovingCircle extends MovingShape{
-  constructor(startX,startY,startSize,){
+  constructor(startX,startY,startSize){
     super(startX,startY,startSize);
   }
 
