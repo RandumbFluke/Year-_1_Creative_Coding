@@ -2,6 +2,7 @@ let x,y,size;
 let xSpeed,ySpeed,xDir,yDir;
 let shapey1;
 let shapey2;
+let shapeArr = [];
 
 //Task 1, 2, 3, 4, 5
 
@@ -18,6 +19,10 @@ function setup() {
   yDir = 1;
   shapey1 = new MovingShape();
   shapey2 = new MovingShape();
+  //array
+  for(let i = 0; i < 200; i++){
+    shapeArr.push(new MovingShape());
+  }
 }
 
 function draw() {
@@ -34,6 +39,11 @@ function draw() {
   shapey1.display();
   shapey2.move();
   shapey2.display();
+  //array
+  for(let i = 0; i < 200; i++){
+    shapeArr[i].move();
+    shapeArr[i].display();
+  }
 }
 
 function move(){
