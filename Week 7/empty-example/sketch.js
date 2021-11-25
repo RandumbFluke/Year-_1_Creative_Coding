@@ -64,7 +64,7 @@ class MovingShape{
   move(){
   this.x = this.x + (this.xSpeed*this.xDir);
   this.y = this.y + (this.ySpeed*this.yDir);
-  if(this.x > (width-(this.size/2) || this.x < (this.size/2)){
+  if(this.x > (width-(this.size/2)) || this.x < (this.size/2)){
     this.xDir = this.xDir * -1; 
   }
   
