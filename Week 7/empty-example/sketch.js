@@ -1,7 +1,10 @@
 let x,y,size;
 let xSpeed,ySpeed,xDir,yDir;
+let shapey1;
 
 //Task 1, 2
+
+// || = OR function
 
 function setup() {
   createCanvas(1200,800);
@@ -12,6 +15,7 @@ function setup() {
   ySpeed = random(0.3,5);
   xDir = 1;
   yDir = 1;
+  shapey1 = newMovingShape();
 }
 
 function draw() {
@@ -23,6 +27,9 @@ function draw() {
   //
   move();
   display();
+  //shapey1
+  shapey1.move();
+  shapey1.display();
 }
 
 function move(){
@@ -55,10 +62,22 @@ class MovingShape{
   }
 
   move(){
-
+  this.x = this.x + (this.xSpeed*this.xDir);
+  this.y = this.y + (this.ySpeed*this.yDir);
+  if(this.x > (width-(this.size/2) || this.x < (this.size/2)){
+    this.xDir = this.xDir * -1; 
+  }
+  
+  if(this.y > (height-(this.size/2)) || this.y < (this.size/2)){
+    this.yDir = this.yDir * -1; 
   }
 
-  display(){
+}
 
+  display(){
+  stroke(10);
+  rectMode(CENTER);
+  fill(0);
+  rect(this.x,this.y,this.size,this.size);
   }
 }
