@@ -1,7 +1,7 @@
 let x,y,size;
 let xSpeed,ySpeed,xDir,yDir;
 
-//Task 1
+//Task 1, 2
 
 function setup() {
   createCanvas(1200,800);
@@ -22,6 +22,12 @@ function draw() {
 function move(){
   x = x + (xSpeed*xDir);
   y = y + (ySpeed*yDir);
+  if(x > (width-size) || x < size){
+    xDir = xDir * -1; //flips between positive and negative 1
+  }
+  if(y > (height-size) || y < size){
+    yDir = yDir * -1 //flips between positive and negative 1
+  }
 }
 
 function display(){
