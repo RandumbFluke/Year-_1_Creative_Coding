@@ -1,8 +1,9 @@
 let x,y,size;
 let xSpeed,ySpeed,xDir,yDir;
 let shapey1;
+let shapey2;
 
-//Task 1, 2
+//Task 1, 2, 3, 4, 5
 
 // || = OR function
 
@@ -15,7 +16,8 @@ function setup() {
   ySpeed = random(0.3,5);
   xDir = 1;
   yDir = 1;
-  shapey1 = newMovingShape();
+  shapey1 = new MovingShape();
+  shapey2 = new MovingShape();
 }
 
 function draw() {
@@ -30,6 +32,8 @@ function draw() {
   //shapey1
   shapey1.move();
   shapey1.display();
+  shapey2.move();
+  shapey2.display();
 }
 
 function move(){
