@@ -1,6 +1,8 @@
 let x,y,size;
 let xSpeed,ySpeed,xDir,yDir;
 
+//Task 1
+
 function setup() {
   createCanvas(1200,800);
   x = width/2; //middle
@@ -13,7 +15,7 @@ function setup() {
 }
 
 function draw() {
-  myFunction(display);
+  display();
 }
 
 function move(){
