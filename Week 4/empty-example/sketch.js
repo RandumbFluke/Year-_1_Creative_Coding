@@ -12,12 +12,15 @@ function setup(){
 }
 
 function draw() {
+  background(0);
   for (let x = 25; x < width; x = x + 50){
     for (let y = 25; y < height; y = y + 50){
       fill(random(0,255), random(0,255),random(0,255));
-      ellipse(x,y,50,50);
-      herringBone(x,y,25);
-      newDrawing();
+
+     // ellipse(x,y,50,50);
+     // herringBone(x,y,25);
+      //newDrawing();
+
       switch(key){
         case "1": 	
           ellipse(x,y,50,50);
