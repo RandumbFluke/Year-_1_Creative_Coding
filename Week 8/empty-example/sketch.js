@@ -39,16 +39,17 @@ function setup() {
     dots.push(new Jitter(random(0,width), random(0,height), random(10, 30)));
   }
   //console.log(dots);
+  console.log(letterCapitalise("hello world"));
 }
 
 function letterCapitalise(str){
   
-  //str.toUpperCase();
+  str = str.toUpperCase();
 
   return str;
 }
 
-console.log(letterCapitalise("hello world"));
+
 
 // create new object when mouse is pressed
 function mousePressed() {
