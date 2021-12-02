@@ -24,7 +24,7 @@ function setup() {
   //circle
   circ = new MovingCircle(random(0,width),random(0,height),random(1,40));
 
-  //array
+
   for(let i = 0; i < 200; i++){
     shapeArr.push(new MovingShape(random(0,width),random(0,height),random(1,40))); //add a new MovingShape to our array each loop at random pos and with random size
   }
