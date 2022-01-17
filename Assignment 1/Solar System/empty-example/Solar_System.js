@@ -15,7 +15,7 @@ function drawshape_mercury(){
   fill(255);
   //textSize(200);
   //textStyle(bold);
-  text("Mercury", 230, 300, 50);
+  //text("Mercury", 230, 300, 50);
 }
 
 //Venus
