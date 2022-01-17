@@ -40,6 +40,9 @@ function drawshape_mars(){
 function drawshape_jupiter(){
   fill("#FF7F50"); //Colour is Coral
   ellipse(700,300,250);
+  //Red spot on Jupiter
+  //fill("#A52A2A"); //Colour is Brown
+  //ellipse(750,340,50);
 }
 
 //Saturn
