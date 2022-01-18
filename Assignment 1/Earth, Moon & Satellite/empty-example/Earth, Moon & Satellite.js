@@ -34,7 +34,7 @@ function draw() {
   line(15,-1,15,-11);
   pop(); //Restore
 
-  //Satellite wing
+  //Satellite wing Left Side
   push();
   
   strokeWeight(2);
@@ -45,16 +45,41 @@ function draw() {
   line(30,80,40,80);
   line(60,20,70,20);
   line(60,80,70,80);
+  line(90,20,100,20);
+  line(90,80,100,80);
 
   strokeWeight(1);
   fill("#191970");//Colour is MidnightBlue
   translate(60,95);
   rotate(180);
   rect(0,0,20,90);
+  rect(-30,0,20,90);
+  rect(-60,0,20,90);
 
-
+  pop();
   
- 
+  //Satellite wing Right Side
+  push();
+  
+  strokeWeight(2);
+  translate(285,125);
+  rotate(130);
+  fill(0);
+  line(30,20,40,20);
+  line(30,80,40,80);
+  line(60,20,70,20);
+  line(60,80,70,80);
 
+  line(0,20,30,20);
+  line(0,80,30,80);
 
+  strokeWeight(1);
+  fill("#191970");//Colour is MidnightBlue
+  translate(60,95);
+  rotate(180);
+  rect(0,0,20,90);
+  rect(30,0,20,90);
+  rect(60,0,20,90);
+
+  pop();
 }
