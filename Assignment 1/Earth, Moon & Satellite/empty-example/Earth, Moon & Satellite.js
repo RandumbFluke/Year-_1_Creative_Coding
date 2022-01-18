@@ -1,10 +1,26 @@
+let c1; //Created the variable c1
+let c2; //Created the variable c2
+
 function setup() {
   createCanvas(1000,800); //Create a rectangle canvas of 1000px by 800px
-  angleMode(DEGREES);
+  angleMode(DEGREES); //Changes the mode from radian to degrees
+  noSmooth();
+  c1 = 0;
+  c2 = 69;
 }
 
 function draw() {
   background("#696969"); //Background colour of DeepGrey
+
+  //Gradient
+  const topColor = color(c1);
+  const bottomColor = color(c2);
+
+  for(let y = 0; y < innerHeight; y++){
+    const lineColor = lerpColor(topColor,bottomColor, y / height);
+    stroke(lineColor);
+    line(0, y, width, y);
+  }
 
   //Earth
   strokeWeight(2); //Gave the ellipse more of an outline by increasing the stroke weight
@@ -24,7 +40,7 @@ function draw() {
 
   //Satellite
   push(); //Save
-  strokeWeight(1);
+  strokeWeight(1);//
   fill("#DCDCDC");//Colour is Gainsboro
   translate(240,180);
   rotate(130);
@@ -57,7 +73,7 @@ function draw() {
   rect(-60,0,20,90);
 
   pop();
-  
+
   //Satellite wing Right Side
   push();
   

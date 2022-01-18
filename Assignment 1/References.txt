@@ -4,5 +4,11 @@ https://www.w3schools.com/colors/colors_names.asp
 9.1: Transformations Pt.1 (Translate, Rotate, Push/Pop) - p5.js Tutorial
 https://www.youtube.com/watch?v=o9sgjuh-CBM
 
+lerpColor()
+https://p5js.org/reference/#/p5/lerpColor
+
+Gradient Tutorial
+https://www.youtube.com/watch?v=DJgDW3F68Xc
+
 Solar System images:
 https://www.google.com/search?q=solar+system&rlz=1C1CHBF_en-GBGB926GB926&sxsrf=AOaemvLYwr-BeUn7zDaGSK1y1c3f-2JpUQ:1642441873495&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjf1LvjrLn1AhW0QUEAHW2HBkcQ_AUoAXoECAEQAw&biw=1920&bih=937&dpr=1#imgrc=TmgWeLfMeCuW9M
