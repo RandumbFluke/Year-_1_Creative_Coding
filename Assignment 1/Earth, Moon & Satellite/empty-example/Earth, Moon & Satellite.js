@@ -23,24 +23,38 @@ function draw() {
   ellipse(780,240,40); //Small ellipse within the 'main' one
 
   //Satellite
+  push(); //Save
   strokeWeight(1);
   fill("#DCDCDC");//Colour is Gainsboro
   translate(240,180);
   rotate(130);
   rect(0,0,30,100);
+  fill(0);
+  strokeWeight(4);
+  line(15,-1,15,-11);
+  pop(); //Restore
 
   //Satellite wing
+  push();
+  
   strokeWeight(2);
+  translate(240,180);
+  rotate(130);
   fill(0);
   line(30,20,40,20);
   line(30,80,40,80);
-  line(0,20,-10,20);
-  line(0,80,-10,80);
+  line(60,20,70,20);
+  line(60,80,70,80);
 
   strokeWeight(1);
   fill("#191970");//Colour is MidnightBlue
   translate(60,95);
   rotate(180);
   rect(0,0,20,90);
+
+
+  
+ 
+
 
 }
