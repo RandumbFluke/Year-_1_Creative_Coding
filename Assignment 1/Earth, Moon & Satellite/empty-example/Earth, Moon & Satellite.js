@@ -1,25 +1,20 @@
 let c1; //Created the variable c1
 let c2; //Created the variable c2
 let dots = []; //Array of dots
-let x;
-let y;
-let diameter;
+let x; //Created the variable x
+let y; //Created the variable y
+let diameter; //Created the variable diameter
 
 function setup() {
   createCanvas(1000,800); //Create a rectangle canvas of 1000px by 800px
   angleMode(DEGREES); //Changes the mode from radian to degrees
-  noSmooth();
   c1 = 0; //Setting values to variable
   c2 = 69; //Setting value to variable
-  let r = random(10,30);
 
   //Dots
-  //push();
-  //fill(255);
   for (let i = 0; i < 50; i++){
-    dots.push(new Stars(random(0,width), random(0,height), random(5,10)));
+    dots.push(new Stars(random(0,width), random(0,height), random(5,10))); //the class star will now appear in random positions and with a random size betweem 5-10px
   }
-  //pop();
 }
 
 function draw() {
@@ -37,13 +32,11 @@ function draw() {
   //Using push and pop here means the stroke colours on the rest of my objects won't change colour in the rest of the code
 
   //Stars
-  push();
+  push(); //Saves the information in here
   fill("#FFFAFA");//Colour is Snow
-  strokeWeight(1);
-  drawingContext.shadowblur = 32;
-  drawingContext.shadowColor = color("#FFFAFA")
-  for (let i = 0; i < dots.length; i++){
-    dots[i].display();
+  strokeWeight(1); //Changed stroke weight to give the stars an outline
+  for (let i = 0; i < dots.length; i++){ //This creates the dots within the length of the canvas
+    dots[i].display(); //Display is being called - this creates the ellipse
   }
 
   //Earth
@@ -53,84 +46,82 @@ function draw() {
 
   //Moon
   strokeWeight(2); //Gave the ellipse more of an outline by increasing the stroke weight
-  fill(69);//Colour is grey
-  ellipse(800,200,150);
-  strokeWeight(1); //Increased the stroke weight to add more depth
-  fill("#808080"); //Colour is lightGrey
+  fill(69);//Colour is DimGrey
+  ellipse(800,200,150);//Created an ellipse specifying the position and width
+  strokeWeight(1); //Decreased the stroke weight to add more depth
+  fill("#808080"); //Colour is Grey
   //Craters
-  ellipse(840,210,30); //Small ellipse within the 'main' one
-  ellipse(790,180,60); //Small ellipse within the 'main' one
-  ellipse(780,240,40); //Small ellipse within the 'main' one
+  ellipse(840,210,30); //Small ellipse within the 'main' one, specifying the position and width
+  ellipse(790,180,60); //Small ellipse within the 'main' one, specifying the position and width
+  ellipse(780,240,40); //Small ellipse within the 'main' one, specifying the position and width
 
   //Satellite
   push(); //Save
   strokeWeight(1);//
   fill("#DCDCDC");//Colour is Gainsboro
-  translate(240,180);
-  rotate(130);
-  rect(0,0,30,100);
-  stroke(255);
-  strokeWeight(4);
-  line(15,-1,15,-11);
+  translate(240,180); // Setting the point for the shapes to be drawn around
+  rotate(130); //Rotates the rectangle 130 degrees
+  rect(0,0,30,100); //x and y axis was specified in 'translate'
+  stroke(255); //Changed the stroke colour to white
+  strokeWeight(4); //Increased the stroke weight to increase lines thickness
+  line(15,-1,15,-11); //Placement of line from x1 - x2 and y1 - y2
   pop(); //Restore
 
-  //Satellite wing Left Side
-  push();
-  stroke(255);
-  strokeWeight(2);
-  translate(240,180);
-  rotate(130);
-  fill(0);
-  line(30,20,40,20);
-  line(30,80,40,80);
-  line(60,20,70,20);
-  line(60,80,70,80);
-  line(90,20,100,20);
-  line(90,80,100,80);
+  //Satellite Wing Left Side
+  push(); //Save
+  stroke(255); //Changed the stroke colour to white
+  strokeWeight(2); //Decreased stroke weight it is now set to a value of 2
+  translate(240,180); // Setting the point for the shapes to be drawn around
+  rotate(130); //Rotates the shapes 130 degrees
+  line(30,20,40,20); //Placement of line from x1 - x2 and y1 - y2
+  line(30,80,40,80); //Placement of line from x1 - x2 and y1 - y2
+  line(60,20,70,20); //Placement of line from x1 - x2 and y1 - y2
+  line(60,80,70,80); //Placement of line from x1 - x2 and y1 - y2
+  line(90,20,100,20); //Placement of line from x1 - x2 and y1 - y2
+  line(90,80,100,80); //Placement of line from x1 - x2 and y1 - y2
 
-  strokeWeight(1);
+  strokeWeight(1); //Decreased stroke weight it is now set to a value of 1
   fill("#191970");//Colour is MidnightBlue
-  translate(60,95);
-  rotate(180);
-  rect(0,0,20,90);
-  rect(-30,0,20,90);
-  rect(-60,0,20,90);
-  pop();
+  translate(60,95); // Setting the point for the shapes to be drawn around
+  rotate(180); //Rotates the rectangles 180 degrees
+  rect(0,0,20,90); //x and y axis was specified in 'translate', specified width and height
+  rect(-30,0,20,90); //Decreased x and y axis to give space in between shapes, specified width and height
+  rect(-60,0,20,90); //Decreased x and y axis to give space in between shapes, specified width and height
+  pop(); //Restore
+  //Keeping the content altogether makes alignment easier for when you rotate them. This means you rotate the whole 'Satellite Wing Left Side' instead of individual bits.
 
-  //Satellite wing Right Side
-  push();
-  stroke(255);
-  strokeWeight(2);
-  translate(285,125);
-  rotate(130);
-  fill(0);
-  line(30,20,40,20);
-  line(30,80,40,80);
-  line(60,20,70,20);
-  line(60,80,70,80);
-
-  line(0,20,30,20);
-  line(0,80,30,80);
-
-  strokeWeight(1);
-  fill("#191970");//Colour is MidnightBlue
-  translate(60,95);
-  rotate(180);
-  rect(0,0,20,90);
-  rect(30,0,20,90);
-  rect(60,0,20,90);
+  //Satellite Wing Right Side
+  push(); //Save
+  stroke(255); //Changed the stroke colour to white
+  strokeWeight(2); //Increased stroke weight it is now set to a value of 2
+  translate(285,125); // Setting the point for the shapes to be drawn around
+  rotate(130); //Rotates the shapes 130 degrees
+  line(30,20,40,20); //Placement of line from x1 - x2 and y1 - y2
+  line(30,80,40,80); //Placement of line from x1 - x2 and y1 - y2
+  line(60,20,70,20); //Placement of line from x1 - x2 and y1 - y2
+  line(60,80,70,80); //Placement of line from x1 - x2 and y1 - y2
+  line(0,20,30,20); //Placement of line from x1 - x2 and y1 - y2
+  line(0,80,30,80); //Placement of line from x1 - x2 and y1 - y2
+ 
+  strokeWeight(1); //Decreased stroke weight it is now set to a value of 1
+  fill("#191970"); //Colour is MidnightBlue
+  translate(60,95); // Setting the point for the shapes to be drawn around
+  rotate(180); //Rotates the shapes 180 degrees
+  rect(0,0,20,90); //x and y axis was specified in 'translate', specified width and height
+  rect(30,0,20,90); //Increased x and y axis to give space in between shapes, specified width and height
+  rect(60,0,20,90); //Increased x and y axis to give space in between shapes, specified width and height
   pop();
 }
 
 // Star Class
-class Stars{
-  constructor(x,y,r){
-    this.x = x;
-    this.y = y;
-    this.diameter = r;
+class Stars{ //Created the class stars
+  constructor(x,y,r){ 
+    this.x = x; //This makes all x values the same as long as 'this.' is before 
+    this.y = y; //This makes all y values the same as long as 'this.' is before 
+    this.diameter = r; //This makes .this.diameter equal to r
   }
   
-  display(){
-    ellipse(this.x, this.y, this.diameter, this.diameter);
+  display(){ //created the function display within the stars class
+    ellipse(this.x, this.y, this.diameter, this.diameter); //created an ellipse with x, y, width and height values
   }
 }
