@@ -40,9 +40,79 @@ function draw() {
   }
 
   //Earth
-  strokeWeight(2); //Gave the ellipse more of an outline by increasing the stroke weight
+  strokeWeight(3); //Gave the ellipse more of an outline by increasing the stroke weight
   fill("#00BFFF");//Colour is DeekSkyBlue
   ellipse(500,400,400); //Ellipse in the middle of the page
+
+  //Land
+  push();
+  strokeWeight(2);
+  point(318,480);
+  point(303,435);
+  point(300,400);
+  point(310,340);
+  point(360,270);
+  point(450,340);
+  point(430,440);
+  
+  fill("#228B22");//Colour is ForestGreen
+  beginShape();
+  curveVertex(318,480);
+  curveVertex(303,435);
+  curveVertex(300,400);
+  curveVertex(310,340);
+  curveVertex(360,270);
+  curveVertex(450,340);
+  curveVertex(430,440);
+  endShape(CLOSE);
+  pop();
+
+  push();
+  strokeWeight(2);
+  point(580,450);
+  point(625,475);
+  point(640,510);
+  point(595,540);
+  point(500,560);
+  point(450,520);
+  point(510,450);
+
+  fill("#228B22");//Colour is ForestGreen
+  beginShape();
+  curveVertex(580,450);
+  curveVertex(625,475);
+  curveVertex(640,510);
+  curveVertex(595,540);
+  curveVertex(500,560);
+  curveVertex(450,520);
+  curveVertex(510,450);
+  endShape(CLOSE);
+  pop();
+
+  push();
+  strokeWeight(2);
+  point(600,380);
+  point(550,390);
+  point(510,340);
+  point(460,280);
+  point(490,220);
+  point(560,250);
+  point(640,280);
+  point(670,340);
+
+  fill("#228B22");//Colour is ForestGreen
+  beginShape();
+  curveVertex(600,380);
+  curveVertex(550,390);
+  curveVertex(510,340);
+  curveVertex(460,280);
+  curveVertex(490,220);
+  curveVertex(560,250);
+  curveVertex(640,280);
+  curveVertex(670,340);
+  endShape(CLOSE);
+  pop();
+
 
   //Moon
   strokeWeight(2); //Gave the ellipse more of an outline by increasing the stroke weight
