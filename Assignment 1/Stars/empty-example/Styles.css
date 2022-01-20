@@ -10,17 +10,10 @@ h1{
     font-size: 20px;
 }
 
-.section-one{
-    align-items: center;
-    justify-content: center;
+main{
+    margin: 0;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-header {
-    background-color: aqua;
-}
-
-body{
-    background-color: aqua;
-}
