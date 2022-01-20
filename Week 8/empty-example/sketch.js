@@ -31,11 +31,10 @@ let words;
 
 function setup() {
   createCanvas(710, 400);
-  noFill();
-  stroke(255);
+  noStroke();
   //background(0);
   // Create objects
-  for (let i = 0; i < 50; i++) {
+  for (let i = 0; i < 0; i++) {
     dots.push(new Jitter(random(0,width), random(0,height), random(10, 30)));
   }
   //console.log(dots);
@@ -82,17 +81,25 @@ class Jitter {
     this.x = x;
     this.y = y;
     this.diameter = r;
-    this.speed = 2;
+    this.xSpeed = random(-2,2);
+    this.ySpeed = random(-1,1.5);
   }
 
   move() {
-    this.x += random(-this.speed, this.speed);
-    this.y += random(-this.speed, this.speed);
+    if(this.x < 0 || this.x > width)
+      this.xSpeed*=-1;
+    if(this.y < 0 || this.y > height)
+      this.ySpeed*=-1;
+    this.x+=this.xSpeed;
+    this.y+=this.ySpeed;
   }
 
+
   display() {
+    fill(random(0,255));
     ellipse(this.x, this.y, this.diameter, this.diameter);
     //noFill();
     //stroke(255);
   }
 }
+

@@ -1,122 +1,52 @@
+let particles = [];  
+
 function setup() {
-  createCanvas(800, 600);
-  angleMode(DEGREES);
+  createCanvas(800,600);//Created a rectangle canvas 800px on the x axis and 600px on the y axis
+  for(let i = 0;i<width/10;i++){
+    particles.push(new Particle());
+}
 }
 
 function draw() {
-  background(102);
-
-  //rotate(30);
-  //translate(0,-150);
-
-  //Shuttle
-  push();
-  strokeWeight(3);
-
-  fill("#33bbff");
-  beginShape();
-  curveVertex(450,350);
-  curveVertex(350,350);
-  curveVertex(400,200);
-  endShape(CLOSE);
-  pop();
-
-  //Window
-  push();
-  strokeWeight(2);
-  fill(0);
-  ellipse(400,270,40);
-  fill(255);
-  ellipse(400,270,35);
-  strokeWeight(1);
-  //Astronaut
-  fill("#ffd9b3");
-  ellipse(400,270,15);
-  fill(0);
-  ellipse(398,268,2);
-  ellipse(402,268,2);
-
-  //Smile
-  fill(255);
-
-  beginShape();
-  curveVertex(396,273);
-  curveVertex(400,276)
-  curveVertex(404,273);
-  endShape(CLOSE);
-  pop();
-
-  //Base of shuttle
-  push();
-  fill("#3399ff")
-  strokeWeight(3);
-  rect(340,350,120,20,20);
-  pop();
-
-  //Shuttle boosters
-  push();
-  fill(0);
-  strokeWeight(2);
-
-  beginShape();
-  curveVertex(360,370);
-  curveVertex(355,390);
-  curveVertex(385,390);
-  curveVertex(380,370);
-  endShape(CLOSE);
-
-  beginShape();
-  curveVertex(420,370);
-  curveVertex(415,390);
-  curveVertex(445,390);
-  curveVertex(440,370);
-  endShape(CLOSE);
-  pop();
-
-  //Fire
-  push();
-  strokeWeight(3);
-  fill("#e65c00");
-  beginShape();
-  curveVertex(355,390);
-  curveVertex(358,400);
-  curveVertex(361,408);
-  curveVertex(356,415);
-  curveVertex(370,420);
-  curveVertex(388,413);
-  curveVertex(383,405);
-  curveVertex(385,390);
-  endShape(CLOSE);
-
-  translate(60,0);
-  beginShape();
-  curveVertex(355,390);
-  curveVertex(358,400);
-  curveVertex(361,408);
-  curveVertex(356,415);
-  curveVertex(370,420);
-  curveVertex(388,413);
-  curveVertex(383,405);
-  curveVertex(385,390);
-  endShape(CLOSE);
-  pop();
-
-  //Shuttle Wings
-  //Left
-  push();
-  strokeWeight(3);
-  fill("#3399ff")
-  beginShape();
-  curveVertex(366,265);
-  curveVertex(330,300);
-  curveVertex(353,310);
-  endShape(CLOSE);
-
-  //Right
-  beginShape();
-  curveVertex(428,265);
-  curveVertex(464,300);
-  curveVertex(439,310);
-  endShape(CLOSE);
-  pop();
+  background( "#112388"); //Colour is blue
+  for(let i = 0;i<particles.length;i++) {
+    particles[i].createParticle();
+    particles[i].moveParticle();
+  }
 }
+
+function mousePressed() {
+  let r = random(10, 30);
+  let b = new Particle(mouseX, mouseY, r);
+  particles.push(b);
+}
+
+// this class describes the properties of a single particle.
+class Particle {
+  // setting the co-ordinates, radius and the
+  // speed of a particle in both the co-ordinates axes.
+    constructor(x,y,r){
+      this.x = random(0,width);
+      this.y = random(0,height);
+      this.r = random(1,8);
+      this.xSpeed = random(-2,2);
+      this.ySpeed = random(-1,1.5);
+    }
+  
+  // creation of a particle.
+    createParticle() {
+      noStroke();
+      fill('rgba(200,169,169,0.5)');
+      circle(this.x,this.y,this.r);
+    }
+  
+  // setting the particle in motion.
+    moveParticle() {
+      if(this.x < 0 || this.x > width)
+        this.xSpeed*=-1;
+      if(this.y < 0 || this.y > height)
+        this.ySpeed*=-1;
+      this.x+=this.xSpeed;
+      this.y+=this.ySpeed;
+    }
+  }  
