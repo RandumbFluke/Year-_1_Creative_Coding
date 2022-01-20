@@ -10,6 +10,9 @@ h1 {
     font-size: 20px;
 }
 
-.section-one{
+main{
+    margin: 0;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
