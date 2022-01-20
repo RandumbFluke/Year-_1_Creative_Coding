@@ -63,7 +63,6 @@ function draw() {
 }
 
 
-
 // this class describes the properties of a single particle.
 class Particle {
   constructor(){
@@ -142,3 +141,4 @@ function moveShape() {
     angle[i] += frequency[i];
   }
 }
+
