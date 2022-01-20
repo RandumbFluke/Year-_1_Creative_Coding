@@ -1,4 +1,4 @@
-let star = []; // array of Jitter objects
+let star = []; 
 let x;
 let y;
 let diameter;
