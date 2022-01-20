@@ -1,9 +1,7 @@
 let star = []; // array of Jitter objects
 let x;
 let y;
-let speed;
 let diameter;
-let words;
 
 function setup() {
   createCanvas(800, 600);
