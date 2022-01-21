@@ -1,52 +1,64 @@
-let particles = [];  
-
-function setup() {
-  createCanvas(800,600);//Created a rectangle canvas 800px on the x axis and 600px on the y axis
-  for(let i = 0;i<width/10;i++){
-    particles.push(new Particle());
-}
+function setup(){
+  createCanvas(1000,800);
+  angleMode(DEGREES);
 }
 
-function draw() {
-  background( "#112388"); //Colour is blue
-  for(let i = 0;i<particles.length;i++) {
-    particles[i].createParticle();
-    particles[i].moveParticle();
-  }
-}
-
-function mousePressed() {
-  let r = random(10, 30);
-  let b = new Particle(mouseX, mouseY, r);
-  particles.push(b);
-}
-
-// this class describes the properties of a single particle.
-class Particle {
-  // setting the co-ordinates, radius and the
-  // speed of a particle in both the co-ordinates axes.
-    constructor(x,y,r){
-      this.x = random(0,width);
-      this.y = random(0,height);
-      this.r = random(1,8);
-      this.xSpeed = random(-2,2);
-      this.ySpeed = random(-1,1.5);
-    }
+function draw(){
+  background(50);
+    //Satellite
+    push(); //Save
+    strokeWeight(1);//Setting the thickness of the stroke
+    fill("#DCDCDC");//Colour is Gainsboro
+    translate(240,180); // Setting the point for the shapes to be drawn around
+    rotate(130); //Rotates the rectangle 130 degrees
+    rect(0,0,30,100); //x and y axis was specified in 'translate'
+    stroke(255); //Changed the stroke colour to white
+    strokeWeight(4); //Increased the stroke weight to increase lines thickness
+    line(15,-1,15,-11); //Placement of line from x1 - x2 and y1 - y2
+    pop(); //Restore
   
-  // creation of a particle.
-    createParticle() {
-      noStroke();
-      fill('rgba(200,169,169,0.5)');
-      circle(this.x,this.y,this.r);
-    }
+    //Satellite Wing Left Side
+    push(); //Save
+    stroke(255); //Changed the stroke colour to white
+    strokeWeight(2); //Decreased stroke weight it is now set to a value of 2
+    translate(240,180); // Setting the point for the shapes to be drawn around
+    rotate(130); //Rotates the shapes 130 degrees
+    line(30,20,40,20); //Placement of line from x1 - x2 and y1 - y2
+    line(30,80,40,80); //Placement of line from x1 - x2 and y1 - y2
+    line(60,20,70,20); //Placement of line from x1 - x2 and y1 - y2
+    line(60,80,70,80); //Placement of line from x1 - x2 and y1 - y2
+    line(90,20,100,20); //Placement of line from x1 - x2 and y1 - y2
+    line(90,80,100,80); //Placement of line from x1 - x2 and y1 - y2
   
-  // setting the particle in motion.
-    moveParticle() {
-      if(this.x < 0 || this.x > width)
-        this.xSpeed*=-1;
-      if(this.y < 0 || this.y > height)
-        this.ySpeed*=-1;
-      this.x+=this.xSpeed;
-      this.y+=this.ySpeed;
-    }
-  }  
+    strokeWeight(1); //Decreased stroke weight it is now set to a value of 1
+    fill("#191970");//Colour is MidnightBlue
+    translate(60,95); // Setting the point for the shapes to be drawn around
+    rotate(180); //Rotates the rectangles 180 degrees
+    rect(0,0,20,90); //x and y axis was specified in 'translate', specified width and height
+    rect(-30,0,20,90); //Decreased x and y axis to give space in between shapes, specified width and height
+    rect(-60,0,20,90); //Decreased x and y axis to give space in between shapes, specified width and height
+    pop(); //Restore
+    //Keeping the content altogether makes alignment easier for when you rotate them. This means you rotate the whole 'Satellite Wing Left Side' instead of individual bits.
+  
+    //Satellite Wing Right Side
+    push(); //Save
+    stroke(255); //Changed the stroke colour to white
+    strokeWeight(2); //Increased stroke weight it is now set to a value of 2
+    translate(285,125); // Setting the point for the shapes to be drawn around
+    rotate(130); //Rotates the shapes 130 degrees
+    line(30,20,40,20); //Placement of line from x1 - x2 and y1 - y2
+    line(30,80,40,80); //Placement of line from x1 - x2 and y1 - y2
+    line(60,20,70,20); //Placement of line from x1 - x2 and y1 - y2
+    line(60,80,70,80); //Placement of line from x1 - x2 and y1 - y2
+    line(0,20,30,20); //Placement of line from x1 - x2 and y1 - y2
+    line(0,80,30,80); //Placement of line from x1 - x2 and y1 - y2
+   
+    strokeWeight(1); //Decreased stroke weight it is now set to a value of 1
+    fill("#191970"); //Colour is MidnightBlue
+    translate(60,95); // Setting the point for the shapes to be drawn around
+    rotate(180); //Rotates the shapes 180 degrees
+    rect(0,0,20,90); //x and y axis was specified in 'translate', specified width and height
+    rect(30,0,20,90); //Increased x and y axis to give space in between shapes, specified width and height
+    rect(60,0,20,90); //Increased x and y axis to give space in between shapes, specified width and height
+    pop();//Restore
+}
