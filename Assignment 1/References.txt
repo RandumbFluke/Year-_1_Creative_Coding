@@ -4,11 +4,16 @@ https://www.w3schools.com/colors/colors_names.asp
 9.1: Transformations Pt.1 (Translate, Rotate, Push/Pop) - p5.js Tutorial
 https://www.youtube.com/watch?v=o9sgjuh-CBM
 
+<<<<<<< HEAD
 9.22: Custom Shapes - p5.js Tutorial
 https://www.youtube.com/watch?v=76fiD5DvzeQ&t=933s
 
 lerpColor()
 https://p5js.org/reference/#/p5/lerpColor
+=======
+Custom shape:
+https://www.youtube.com/watch?v=76fiD5DvzeQ&t=706s
+>>>>>>> 43b83105a98c27d79185bac29547551656f92f75
 
 Gradient Tutorial
 https://www.youtube.com/watch?v=DJgDW3F68Xc
@@ -19,5 +24,17 @@ https://p5js.org/examples/simulate-particles.html
 Week 8 Workshop:
 https://github.com/davemeckin/Intro_to_Creative_Programming/tree/master/Week_08
 
+<<<<<<< HEAD
+=======
+p5.js examples:
+https://p5js.org/examples/
+
+Variables:
+https://www.w3schools.com/js/js_variables.asp
+
+beginShape()
+https://p5js.org/reference/#/p5/beginShape
+
+>>>>>>> 43b83105a98c27d79185bac29547551656f92f75
 Solar System images:
 https://www.google.com/search?q=solar+system&rlz=1C1CHBF_en-GBGB926GB926&sxsrf=AOaemvLYwr-BeUn7zDaGSK1y1c3f-2JpUQ:1642441873495&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjf1LvjrLn1AhW0QUEAHW2HBkcQ_AUoAXoECAEQAw&biw=1920&bih=937&dpr=1#imgrc=TmgWeLfMeCuW9M
