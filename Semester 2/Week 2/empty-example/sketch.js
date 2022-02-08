@@ -10,16 +10,28 @@ let myVida;    // VIDA
   mic = new p5.AudioIn();
   mic.start();
 
+  //Task 3
+  myVida = new Vida(this); // create the vida object
+  myVida.progressiveBackgroundFlag = true;
+  myVida.imageFilterFeedback = 0.92;
+  myVida.imageFilterThreshold = 0.15;
+  frameRate(30); // set framerate
+
   //Task 2
   fft = new p5.FFT();
   fft.setInput(mic);
 }
 
 function draw(){
-  background(0);
+  background(0,150);
   fill(255);
   noStroke();
   text('tap to start', width/2, 20);
+
+  myVida.update(myCapture);
+  image(myVida.thresholdImage, 0, 0);
+  let whiteCount = 0;
+  let mappedMovement = map(whiteCount, 768, 1400, 0, width);
 
   //micLevel = mic.getLevel();
   //let y = height - micLevel * height;
@@ -53,22 +65,27 @@ function draw(){
 
     push();
       strokeWeight(6);
-      stroke(255,0,0);
+      stroke(255-treble,0,0);
       scale(scaleTreble);
+      rotate(-frameCount * scaleTreble/100);
       point(mappedTreble, height/4);
     pop();
 
     push();
       strokeWeight(4);
-      stroke(0,0,255);
+      stroke(0,0,255-mid);
       scale(scaleMid);
+      rotate(frameCount * scaleMid/100);
       point(mappedMid, height/4);
+      strokeWeight(2);
+      line(mappedMovement, height/4, mappedMovement, height);
     pop();
 
     push();
       strokeWeight(6);
-      stroke(255);
+      stroke(255-bass);
       scale(scaleBass);
+      rotate(-frameCount * scaleBass/100);
       point(mappedBass, height/4);
     pop();
   }
