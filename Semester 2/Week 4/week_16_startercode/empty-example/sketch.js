@@ -35,22 +35,25 @@ function draw() {
         break;
 
         case 2:
-            runGame(1);
+            runGame(0.7);
         break;
 
         case 3:
-            runGame(1);
+            runGame(0.5);
         break;
     }
 }
 
 function runGame(intervalScale){
+    testLevel()
+
     for (let i = pipes.length-1; i >= 0; i--){
         pipes[i].show();
         pipes[i].update();
 
         if (pipes[i].hits(bird)){
             console.log("HIT");
+            health -= 0.1;
         }
 
         if (pipes[i].offscreen()){
@@ -61,9 +64,20 @@ function runGame(intervalScale){
     bird.update();
     bird.show();
 
-    if (frameCount % pipeInterval === 0){
+    if (frameCount % (pipeInterval*intervalScale) == 0){
         pipes.push(new Pipe());
     }
+
+    if (frameCount % timerInterval == 0){
+        timer++;
+        console.log(timer);
+    }
+
+    textSize(30);
+        fill("0f82af");
+        textAlign(LEFT,CENTER);
+        text("Health: " + nf(health, 1, 2), 10, 30);
+        text("Level: " + level, 200, 30);
 }
 
 function keyPressed(){
@@ -81,3 +95,16 @@ function keyPressed(){
     }
 }
 
+function testLevel(){
+    if(health <= 0){
+        level = -1;
+    } else{
+        if (timer <=20){
+            level = 1;
+        }else if (timer > 20 && timer <= 40){
+            level = 2;
+        }else if (timer > 40){
+            level = 3;
+        }
+    }
+}
