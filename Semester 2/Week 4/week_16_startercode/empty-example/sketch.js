@@ -15,7 +15,33 @@ function setup() {
 
 function draw() {
     background(220);
-    runGame(1);
+    switch(level){
+        case -1:
+            textSize(120);
+            fill(255,0,0);
+            textAlign(CENTER,CENTER);
+            text("GAME OVER! \n Press Enter to Start", width/2, height/2);
+        break;
+
+        case 0:
+            textSize(100);
+            fill("#0f82af");
+            textAlign(CENTER,CENTER);
+            text("Press Enter to Start", width/2, height/2);
+        break
+
+        case 1:
+            runGame(1);
+        break;
+
+        case 2:
+            runGame(1);
+        break;
+
+        case 3:
+            runGame(1);
+        break;
+    }
 }
 
 function runGame(intervalScale){
@@ -41,6 +67,14 @@ function runGame(intervalScale){
 }
 
 function keyPressed(){
+    if (keyCode === ENTER){
+        level = 1;
+        health = 10;
+        pipes = [];
+        timer = 0;
+        console.log("START");
+    }
+
     if (keyCode === 32){
         bird.up();
         console.log("SPACE");
