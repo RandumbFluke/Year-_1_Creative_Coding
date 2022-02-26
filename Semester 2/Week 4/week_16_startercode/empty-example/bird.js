@@ -9,16 +9,24 @@ class Bird  {
     this.y = height/2;
     this.x = 64;
 
-    this.gravity = 0.5;
-    this.lift = -14;
-    this.velocity = 0;
+    //Original
+    //this.gravity = 0.5;
+    //this.lift = -14;
+    //this.velocity = 0;
+
+    this.gravity = 0.5; //How long you float in the air
+    this.lift = -10; //How high you go on lift
+    this.velocity = 0; //How quickly you fall to the ground
   }
   
 
   show() {
     noStroke();
-    fill("#ff884f");
-    ellipse(this.x, this.y, 32, 32);
+    //fill("#ff884f");
+    fill(255,0,40);
+    //Shape of the bird
+    //ellipse(this.x, this.y, 32, 32); 
+    rect(this.x, this.y, 32, 32);
   }
 
   up() {

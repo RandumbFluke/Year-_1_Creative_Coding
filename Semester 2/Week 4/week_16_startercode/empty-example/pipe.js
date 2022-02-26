@@ -11,7 +11,8 @@ class Pipe {
     this.bottom = height - (this.top + this.spacing);
     this.x = width;
     this.w = 80;
-    this.speed = 6;
+    //Changes the speed of the pipes
+    this.speed = 8;
     this.highlight = false;
 
   }
@@ -29,10 +30,12 @@ class Pipe {
 
   show() {
     noStroke();
-    fill("#e782ac");
+    //fill("#e782ac");
+    fill(0,50,255);
     if (this.highlight) {
       fill(255, 0, 0);
     }
+    //Shape of the pipe
     rect(this.x, 0, this.w, this.top);
     rect(this.x, height - this.bottom, this.w, this.bottom);
   }
