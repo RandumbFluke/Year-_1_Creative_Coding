@@ -7,6 +7,9 @@ function setup(){
 
 //Vinyl Background
 function drawshape_vinyl(){ 
+    //Background
+    background("#8A2BE2");
+
     //Vinyl Track
     push();
     //Rotation

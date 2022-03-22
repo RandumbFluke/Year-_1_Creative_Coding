@@ -1,5 +1,8 @@
 //Triplet Note Background
 function drawshape_triplet(){
+    //Background
+    background("#DC143C");
+    
     push();
     stroke(0);
     fill(0);

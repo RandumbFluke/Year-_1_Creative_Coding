@@ -1,5 +1,9 @@
 //Speaker
 function drawshape_speaker(){
+    //Background
+    background("#FF69B4");
+
+    //Speaker
     push();
     fill(20);
     ellipse(400,400,350);

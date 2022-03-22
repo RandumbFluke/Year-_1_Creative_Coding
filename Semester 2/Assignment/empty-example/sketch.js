@@ -5,9 +5,24 @@ function setup() {
 
 //Draw function
 function draw() {
-  background("#DC143C");
-  drawshape_vinyl();
-  //drawshape_triplet();
-  //drawshape_speaker();
+  //Text
+  background("#87CEFA");
+  textSize(50);
+  text('Press keys - 1, 2, 3',200,400);
+
+  //Switch key
+  switch(key){
+    case "1":
+      drawshape_speaker();
+    break;
+
+    case "2":
+      drawshape_vinyl();
+    break;
+
+    case "3":
+      drawshape_triplet();
+    break;
+  }
 }
 
