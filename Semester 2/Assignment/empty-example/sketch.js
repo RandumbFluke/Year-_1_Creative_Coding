@@ -8,7 +8,7 @@ function draw() {
   //Text
   background("#87CEFA");
   textSize(50);
-  text('Press keys - 1, 2, 3',200,400);
+  text('PRESS KEYS - 1, 2, 3',150,400);
 
   //Switch key
   switch(key){
