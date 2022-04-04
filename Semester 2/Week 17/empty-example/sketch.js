@@ -1,6 +1,6 @@
 let song;
-let osc;
-let playing = false;
+let fft;
+let particles = [];
 
 function preload(){
   song = loadSound("Tropic Love.mp3");
@@ -8,32 +8,92 @@ function preload(){
 
 function setup() {
   getAudioContext().suspend();
-  createCanvas(200,200);
-  osc = new p5.Oscillator();
-  osc.setType('sine');
-  osc.freq(440);
-  osc.start();
+  createCanvas(windowWidth, windowHeight);
+  angleMode(DEGREES);
   background(0);
   fill(255);
   textAlign(CENTER);
   text("click to play/pause", width/2, height/2);
-  song.loop();
-  //noLoop();
+  song.play();
+  song.setVolume(0.25);
+  noLoop();
+
+  fft = new p5.FFT();
 }
 
-function mousePressed() {
-  userStartAudio();
-  if (mouseX > 0 && mouseX < width && mouseY < height && mouseY > 0) { //check if we're in the canvas
-    if (!playing) {
-      osc.amp(0.5, 0.5);
-      playing = true;
-    } else {
-      osc.amp(0, 0.5);
-      playing = false;
+function draw() {
+  noFill();
+  stroke(255);
+
+  translate(width/2, height/2);
+  let wave = fft.waveform();
+
+  for (let t = -1; t <= 1; t+=2){
+    beginShape();
+    for(let i = 0; i <= 100; i += 0.5){
+      let index = floor(map(i, 0, 100, 0, wave.length -1));
+  
+      let r = map(wave[index], -1, 1, 150, 350);
+  
+      let x = r * sin(i) * t;
+      let y = r * cos(i);
+      vertex(x,y);
+    }
+    endShape();
+  }
+
+
+  let p = new Particle();
+  particles.push(p);
+
+  for (let i = 0; i < particles.length; i--) {
+    if (!particles[i].edges()) {
+      particles[i].update();
+      particles[i].show();
+    } else{
+      particles.splice(i, 1);
     }
   }
 }
 
-function draw() {
-  // put drawing code here
+function mousePressed() {
+  userStartAudio();
+  if (song.isPlaying()) {
+    song.pause();
+    noLoop();
+  } else {
+    song.play();
+    loop();
+  }
+}
+
+class Particle{
+  constructor(){
+    this.pos = p5.Vector.random2D().mult(250);
+    this.vel = createVector(0,0);
+    this.acc = this.pos.copy().mult(random(0.0001, 0.00001));
+
+    this.w = random(3, 5);
+
+    this.color = [random(200,255),random(200,255),random(200,255)];
+  }
+
+  update(){
+    this.vel.add(this.acc);
+    this.vel.add(this.vel);
+  }
+
+  edges(){
+    if (this.pos.x < -width / 2 || this.pos.x > width / 2 || this.pos.y < -height / 2 || this.pos.y > height / 2){
+      return true;
+    } else{
+      return false;
+    }
+  }
+
+  show(){
+    noStroke();
+    fill(255);
+    ellipse(this.pos.x, this.pos.y, 4)
+  }
 }
