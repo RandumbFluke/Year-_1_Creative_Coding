@@ -1,6 +1,14 @@
+let song;
+
+function preload(){
+  song = loadSound("Tropic Love.mp3");
+}
+
 //setup function
 function setup() {
   createCanvas(800,800);
+  song.play();
+  song.setVolume(1);
 }
 
 //Draw function

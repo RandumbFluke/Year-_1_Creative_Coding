@@ -8,3 +8,7 @@ https://www.youtube.com/watch?v=o9sgjuh-CBM&t=229s
 
 Worksheet week 4
 https://github.com/davemeckin/Intro_to_Creative_Programming/tree/master/Week_04
+
+04/04/22
+7.1: Loading and Playing - p5.js Sound Tutorial
+https://www.youtube.com/watch?v=Pn1g1wjxl_0&list=PLRqwX-V7Uu6aFcVjlDAkkGIixw70s7jpW&index=1
