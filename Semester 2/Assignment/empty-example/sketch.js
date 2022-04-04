@@ -1,22 +1,21 @@
 let song;
 
-function preload(){
-  song = loadSound("Tropic Love.mp3");
-}
 
 //setup function
 function setup() {
   createCanvas(800,800);
-  song.play();
-  song.setVolume(1);
 }
 
 //Draw function
 function draw() {
   //Text
-  background("#87CEFA");
-  textSize(50);
-  text('PRESS KEYS - 1, 2, 3',150,400);
+  push();
+  background(0);
+  textAlign(CENTER);
+  fill(255);
+  text('PRESS KEYS - 1, 2, 3, 4',width/2,height/2);
+  pop();
+
 
   //Switch key
   switch(key){
@@ -30,6 +29,10 @@ function draw() {
 
     case "3":
       drawshape_triplet();
+    break;
+
+    case "4":
+      drawshape_particle_field();
     break;
   }
 }
