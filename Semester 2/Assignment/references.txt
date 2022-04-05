@@ -10,8 +10,8 @@ Worksheet week 4
 https://github.com/davemeckin/Intro_to_Creative_Programming/tree/master/Week_04
 
 04/04/22
-7.1: Loading and Playing - p5.js Sound Tutorial
-https://www.youtube.com/watch?v=Pn1g1wjxl_0&list=PLRqwX-V7Uu6aFcVjlDAkkGIixw70s7jpW&index=1
+Week 19
+https://github.com/davemeckin/Intro_to_Creative_Programming/blob/master/Week_19/Week_19.md
 
 05/04/22
 17.4: Amplitude Analysis - p5.js Sound Tutorial
@@ -26,4 +26,10 @@ Watch: http://youtu.be/7GhO2lncvBg
 
 Code an Audio Visualizer in p5js (from scratch) | Coding Project #17
 https://www.youtube.com/watch?v=uk96O7N1Yo0&list=PL1J0QBop_zuiu1dnyUgKDORaOrex7LQbi&index=10
+
+17.9: Sound Visualization: Graphing Amplitude - p5.js Sound Tutorial
+https://www.youtube.com/watch?v=jEwAMgcCgOA&list=PL1J0QBop_zuiu1dnyUgKDORaOrex7LQbi&index=6
+
+17.10: Sound Visualization: Radial Graph - p5.js Sound Tutorial
+https://www.youtube.com/watch?v=h_aTgOl9J5I&list=PL1J0QBop_zuiu1dnyUgKDORaOrex7LQbi&index=7
 

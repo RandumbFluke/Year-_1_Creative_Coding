@@ -6,6 +6,7 @@ let amp;
 let amp2;
 let fft;
 let particles = [];
+let volhistory = [];
 
 function preload() {
   song1 = loadSound("../Music/Omen.mp3");
@@ -23,7 +24,7 @@ function setup() {
 
   amp = new p5.Amplitude();
 
-  angleMode(DEGREES);
+  //angleMode(DEGREES);
   fft = new p5.FFT();
 }
 
@@ -62,7 +63,7 @@ function draw() {
 
 function keyPressed() {
   userStartAudio();
-  hasSongChanged = true;//Switch key
+  hasSongChanged = true;
   switch (key) {
     case "1":
       currentSong.stop();
