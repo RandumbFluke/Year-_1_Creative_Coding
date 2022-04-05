@@ -23,3 +23,7 @@ Song: Cartoon x Time To Talk - Omen (Ft. Asena) [NCS10 Release]
 Music provided by NoCopyrightSounds
 Free Download/Stream: http://NCS.io/Omen
 Watch: http://youtu.be/7GhO2lncvBg
+
+Code an Audio Visualizer in p5js (from scratch) | Coding Project #17
+https://www.youtube.com/watch?v=uk96O7N1Yo0&list=PL1J0QBop_zuiu1dnyUgKDORaOrex7LQbi&index=10
+
