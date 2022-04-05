@@ -10,7 +10,7 @@ let volhistory = [];
 
 function preload() {
   song1 = loadSound("../Music/Omen.mp3");
-  song2 = loadSound("../Music/Omen.mp3");
+  song2 = loadSound("../Music/Cartoon - Why We Lose.mp3");
   song3 = loadSound("../Music/Cartoon - On and On.mp3");
   song4 = loadSound("../Music/Tropic Love.mp3");
 }
