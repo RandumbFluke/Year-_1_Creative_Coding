@@ -33,3 +33,9 @@ https://www.youtube.com/watch?v=jEwAMgcCgOA&list=PL1J0QBop_zuiu1dnyUgKDORaOrex7L
 17.10: Sound Visualization: Radial Graph - p5.js Sound Tutorial
 https://www.youtube.com/watch?v=h_aTgOl9J5I&list=PL1J0QBop_zuiu1dnyUgKDORaOrex7LQbi&index=7
 
+Week 4 - Part 1 - Random Colors
+https://www.youtube.com/watch?v=oVPo7I2960c
+
+Coolers.co
+https://coolors.co/palette/03071e-370617-6a040f-9d0208-d00000-dc2f02-e85d04-f48c06-faa307-ffba08
+

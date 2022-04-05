@@ -1,4 +1,5 @@
 let angle = 0;
+pallete = ["#03071e","#370617","#6a040f","#9d0208","#d00000","#dc2f02","#e85d04","#f48c06","#faa307","#ffba08"];
 
 function drawshape_vinyl(){ 
   //Background
@@ -13,8 +14,10 @@ function drawshape_vinyl(){
   angleMode(DEGREES);
 
   push();
+  let c1 = random(pallete);
   let vol = amp.getLevel();
   volhistory.push(vol);
+  //stroke(c1);
   stroke(255);
   noFill();
   

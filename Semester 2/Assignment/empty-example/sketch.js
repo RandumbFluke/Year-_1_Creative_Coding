@@ -10,7 +10,7 @@ let volhistory = [];
 
 function preload() {
   song1 = loadSound("../Music/Omen.mp3");
-  song2 = loadSound("../Music/Cartoon - Why We Lose.mp3");
+  song2 = loadSound("../Music/Omen.mp3");
   song3 = loadSound("../Music/Cartoon - On and On.mp3");
   song4 = loadSound("../Music/Tropic Love.mp3");
 }
@@ -19,7 +19,11 @@ function setup() {
   createCanvas(800, 800);
   getAudioContext().suspend();
   currentSong = song1;
-  currentSong.setVolume(0.25);
+  song1.setVolume(0.25);
+  song2.setVolume(0.25);
+  song3.setVolume(0.25);
+  song4.setVolume(0.25);
+  //currentSong.setVolume(0.25);
   
 
   amp = new p5.Amplitude();
