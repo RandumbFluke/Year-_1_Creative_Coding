@@ -1,15 +1,12 @@
 let angle = 0;
 
-function setup(){
-    createCanvas(800,800);
-    angleMode(DEGREES);
-}
+
 
 //Vinyl Background
 function drawshape_vinyl(){ 
     //Background
     background("#8A2BE2");
-
+    angleMode(DEGREES);
     //Vinyl Track
     push();
     //Rotation
