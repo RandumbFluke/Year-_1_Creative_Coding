@@ -1,17 +1,18 @@
 let song;
 let amp;
+let amp2;
 let fft;
 let particles = [];
 
 function preload(){
-  song = loadSound("Tropic Love.mp3");
+  song = loadSound("Omen.mp3");
 }
 
 function setup() {
   createCanvas(800,800);
   getAudioContext().suspend();
   song.play();
-  song.setVolume(0.25);
+  song.setVolume(0.30);
   amp = new p5.Amplitude();
   noLoop();
 
@@ -73,6 +74,8 @@ function draw() {
   stroke(255);
   translate(width/2, height/2);
 
+  fft.analyze();
+  amp2 = fft.getEnergy(20, 200);
 
   let wave = fft.waveform();
 
@@ -81,7 +84,7 @@ function draw() {
 
   for (let i = particles.length - 1; i >= 0; i--){
     if (!particles[i].edges()){
-      particles[i].update(amp > 230);
+      particles[i].update(amp2 > 150);
       particles[i].show();
     } else{
       particles.splice(i, 1);
@@ -113,10 +116,15 @@ class Particle {
 
     this.w = random(3, 5);
   }
-  update(){
+  update(cond){
     this.vel.add(this.acc);
     this.pos.add(this.vel);
-  }
+    if (cond){
+      this.pos.add(this.vel);
+      this.pos.add(this.vel);
+      this.pos.add(this.vel);
+    }
+  } 
 
   edges(){
     if (this.pos.x < -width /2 || this.pos.x > width / 2 || this.pos.y < -height / 2 || this.pos.y > height / 2){
