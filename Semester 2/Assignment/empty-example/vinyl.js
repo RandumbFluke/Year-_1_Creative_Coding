@@ -17,8 +17,8 @@ function drawshape_vinyl(){
   let c1 = random(pallete);
   let vol = amp.getLevel();
   volhistory.push(vol);
-  //stroke(c1);
-  stroke(255);
+  stroke(c1);
+  //stroke(255);
   noFill();
   
   translate(width/2,height/2);
