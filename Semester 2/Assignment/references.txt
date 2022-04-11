@@ -43,3 +43,16 @@ https://coolors.co/palette/03071e-370617-6a040f-9d0208-d00000-dc2f02-e85d04-f48c
 Sine wave structures in p5.js | Coding Project #1
 https://www.youtube.com/watch?v=vmhRlDyPHMQ&t=325s
 
+p5.js getLevel()
+https://p5js.org/reference/#/p5.Amplitude/getLevel
+
+p5.js splice()
+https://p5js.org/reference/#/p5/splice
+
+p5.js fft()
+https://p5js.org/reference/#/p5.FFT
+
+p5.js random2D()
+https://p5js.org/reference/#/p5.Vector/random2D
+
+
