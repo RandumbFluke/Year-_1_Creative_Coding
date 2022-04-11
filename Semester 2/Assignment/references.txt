@@ -17,12 +17,15 @@ https://github.com/davemeckin/Intro_to_Creative_Programming/blob/master/Week_19/
 17.4: Amplitude Analysis - p5.js Sound Tutorial
 https://www.youtube.com/watch?v=NCCHQwNAN6Y&list=PL1J0QBop_zuiu1dnyUgKDORaOrex7LQbi&index=8
 
+Track: Cartoon On & On (feat. Daniel Levi) [NCS Release]
+Music provided by NoCopyrightSounds.
+Watch: https://youtu.be/7GhO2lncvBg
+Free Download / Stream: http://ncs.io/onandon
 
-https://ncs.io/Omen
-Song: Cartoon x Time To Talk - Omen (Ft. Asena) [NCS10 Release]
-Music provided by NoCopyrightSounds
-Free Download/Stream: http://NCS.io/Omen
-Watch: http://youtu.be/7GhO2lncvBg
+Track: Cartoon x Time To Talk - Omen (Ft. Asena) [NCS10 Release]
+Music provided by NoCopyrightSounds.
+Watch: https://youtu.be/7GhO2lncvBg
+Free Download / Stream: https://ncs.io/Omen
 
 Code an Audio Visualizer in p5js (from scratch) | Coding Project #17
 https://www.youtube.com/watch?v=uk96O7N1Yo0&list=PL1J0QBop_zuiu1dnyUgKDORaOrex7LQbi&index=10

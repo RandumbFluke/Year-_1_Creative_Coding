@@ -1,0 +1,58 @@
+21/03/22
+HTML Colours:
+https://www.w3schools.com/colors/colors_names.asp
+
+22/03/22
+9.1: Transformations Pt.1 (Translate, Rotate, Push/Pop) - p5.js Tutorial
+https://www.youtube.com/watch?v=o9sgjuh-CBM&t=229s
+
+Worksheet week 4
+https://github.com/davemeckin/Intro_to_Creative_Programming/tree/master/Week_04
+
+04/04/22
+Week 19
+https://github.com/davemeckin/Intro_to_Creative_Programming/blob/master/Week_19/Week_19.md
+
+05/04/22
+17.4: Amplitude Analysis - p5.js Sound Tutorial
+https://www.youtube.com/watch?v=NCCHQwNAN6Y&list=PL1J0QBop_zuiu1dnyUgKDORaOrex7LQbi&index=8
+
+
+https://ncs.io/Omen
+Song: Cartoon x Time To Talk - Omen (Ft. Asena) [NCS10 Release]
+Music provided by NoCopyrightSounds
+Free Download/Stream: http://NCS.io/Omen
+Watch: http://youtu.be/7GhO2lncvBg
+
+Code an Audio Visualizer in p5js (from scratch) | Coding Project #17
+https://www.youtube.com/watch?v=uk96O7N1Yo0&list=PL1J0QBop_zuiu1dnyUgKDORaOrex7LQbi&index=10
+
+17.9: Sound Visualization: Graphing Amplitude - p5.js Sound Tutorial
+https://www.youtube.com/watch?v=jEwAMgcCgOA&list=PL1J0QBop_zuiu1dnyUgKDORaOrex7LQbi&index=6
+
+17.10: Sound Visualization: Radial Graph - p5.js Sound Tutorial
+https://www.youtube.com/watch?v=h_aTgOl9J5I&list=PL1J0QBop_zuiu1dnyUgKDORaOrex7LQbi&index=7
+
+Week 4 - Part 1 - Random Colors
+https://www.youtube.com/watch?v=oVPo7I2960c
+
+Coolers.co
+https://coolors.co/palette/03071e-370617-6a040f-9d0208-d00000-dc2f02-e85d04-f48c06-faa307-ffba08
+
+11/04/22
+Sine wave structures in p5.js | Coding Project #1
+https://www.youtube.com/watch?v=vmhRlDyPHMQ&t=325s
+
+p5.js getLevel()
+https://p5js.org/reference/#/p5.Amplitude/getLevel
+
+p5.js splice()
+https://p5js.org/reference/#/p5/splice
+
+p5.js fft()
+https://p5js.org/reference/#/p5.FFT
+
+p5.js random2D()
+https://p5js.org/reference/#/p5.Vector/random2D
+
+
