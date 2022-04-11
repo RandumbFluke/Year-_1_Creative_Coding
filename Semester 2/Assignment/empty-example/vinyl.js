@@ -1,7 +1,4 @@
 let angle = 0;
-let pallete = ["#03071e","#370617","#6a040f","#9d0208","#d00000","#dc2f02","#e85d04","#f48c06","#faa307","#ffba08"];
-
-
 
 function drawshape_vinyl(){ 
   //Background
@@ -9,31 +6,40 @@ function drawshape_vinyl(){
   push();
   fill(255);
   textSize(30);
-  text("Cartoon - Why We Lose", 240, 100);
+  text("Cartoon - On & On", 270, 100);
   pop();
 
   //Settings
   angleMode(DEGREES);
   push();
 
-
-  let c1 = random(pallete);
   let vol = amp.getLevel();
   volhistory.push(vol);
-  stroke(c1);
-  noFill();
+  strokeWeight(3);
+  stroke(255);
   
   translate(width/2,height/2);
 
-  beginShape();
-  for (let i = 0; i < 360; i++){
-    let r = map(volhistory[i], 0, 1, 125, 600);
-    let x = r * cos(i);
-    let y = r * sin(i)
+  for (let i = 0; i < 20; i++) { //Size
 
-    vertex(x, y);
+    //Colours
+    let r = map(sin(frameCount / 2), -1, 1, 200, 220);
+    let g = map(i, 0, 20, 255, 20);
+    let b = map(cos(frameCount), -1, 1, 200, 0);
+
+    fill(r,g,b);
+
+    beginShape();
+    for (let i = 0; i < 360; i++){
+      let r = map(volhistory[i], 0, 1, 125, 1200);
+      let x = r * cos(i);
+      let y = r * sin(i)
+
+
+      vertex(x, y);
+    }
+    endShape();
   }
-  endShape();
 
   if (volhistory.length > 360){
     volhistory.splice(0,1);

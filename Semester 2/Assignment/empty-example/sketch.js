@@ -1,4 +1,4 @@
-let song1, song2, song3;
+let song1, song2;
 let currentSong;
 let hasSongChanged = false;
 let lastKey;
@@ -10,9 +10,7 @@ let volhistory = [];
 
 function preload() {
   song1 = loadSound("../Music/Omen.mp3");
-  song2 = loadSound("../Music/Cartoon - Why We Lose.mp3");
-  song3 = loadSound("../Music/Cartoon - On and On.mp3");
-  song4 = loadSound("../Music/Tropic Love.mp3");
+  song2 = loadSound("../Music/Cartoon - On and On.mp3");
 }
 
 function setup() {
@@ -21,14 +19,9 @@ function setup() {
   currentSong = song1;
   song1.setVolume(0.25);
   song2.setVolume(0.25);
-  song3.setVolume(0.25);
-  song4.setVolume(0.25);
-  //currentSong.setVolume(0.25);
-  
 
   amp = new p5.Amplitude();
 
-  //angleMode(DEGREES);
   fft = new p5.FFT();
 }
 
@@ -39,7 +32,7 @@ function draw() {
   background(0);
   textAlign(CENTER);
   fill(255);
-  text('PRESS KEYS - 1, 2, 3, 4', width / 2, height / 2);
+  text('PRESS KEYS - 1 or 2', width / 2, height / 2);
   pop();
 
 
@@ -51,14 +44,6 @@ function draw() {
 
     case "2":
       drawshape_vinyl();
-      break;
-
-    case "3":
-      drawshape_triplet();
-      break;
-
-    case "4":
-      drawshape_particle_field();
       break;
   }
 
@@ -81,18 +66,6 @@ function keyPressed() {
       currentSong = song2;
       currentSong.play();
 
-      break;
-
-    case "3":
-      currentSong.stop();
-      currentSong = song3;
-      currentSong.play();
-      break;
-
-    case "4":
-      currentSong.stop();
-      currentSong = song4;
-      currentSong.play();
       break;
     default:
       currentSong.stop();

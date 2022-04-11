@@ -39,3 +39,7 @@ https://www.youtube.com/watch?v=oVPo7I2960c
 Coolers.co
 https://coolors.co/palette/03071e-370617-6a040f-9d0208-d00000-dc2f02-e85d04-f48c06-faa307-ffba08
 
+11/04/22
+Sine wave structures in p5.js | Coding Project #1
+https://www.youtube.com/watch?v=vmhRlDyPHMQ&t=325s
+
