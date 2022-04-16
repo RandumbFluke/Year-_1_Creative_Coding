@@ -19,6 +19,7 @@ function drawshape_vinyl(){
   push(); //Store information
 
   let vol = amp.getLevel(); //Returns an amplitude reading when called - amplitude is a number between 0 and 1, however I have maxed the sound to 0.3 so that is the highest the amplitude reading can go
+  let diam = map(vol, 0.02, 0.25, 125, 1500);
   volhistory.push(vol); //Calling on the array in sketch.js and inserting the values from the vol variable
   //White outline with a thickness of 3px
   strokeWeight(3);
@@ -26,17 +27,18 @@ function drawshape_vinyl(){
   
   translate(width/2,height/2); //Starting position for each object - x and y axis is the middle of the canvas
 
-  for (let i = 0; i < 20; i++) { // i cannot be greater than 20
+  for (let i = 0; i < 10; i++) { // i cannot be greater than 10
 
     //These variables control the colours 
     //frameCount is the number of frames since the display started
-    let r = map(sin(frameCount/3), -1, 1, 50, 220); //Speec at which it changes colour
-    let g = map(i, 0, 20, 205, 20);
+    let r = map(sin(frameCount/2), -1, 1, 50, 220); //Speec at which it changes colour
+    let g = map(i, 0, 0, 50, 100);
     let b = map(cos(frameCount), -1, 1, 20, 180);
 
     fill(r,g,b); //Colouring the interior with the variables r, g, b
 
     beginShape(); //Records vertices for a shape 
+
     for (let i = 0; i < 360; i++){ //Makes it so i cannot go greater than 360 - a circle
       let r = map(volhistory[i], 0, 1, 125, 1200); //Calling on the array - given a starting diameter of 125px and can expand out to 1200px
       //Creating a circle
