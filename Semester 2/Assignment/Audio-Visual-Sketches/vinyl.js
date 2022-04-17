@@ -40,7 +40,7 @@ function drawshape_vinyl(){
     beginShape(); //Records vertices for a shape 
 
     for (let i = 0; i < 360; i++){ //Makes it so i cannot go greater than 360 - a circle
-      let r = map(volhistory[i], 0, 1, 125, 1200); //Calling on the array - given a starting diameter of 125px and can expand out to 1200px
+      let r = map(volhistory[i], 0, 1, 125, diam); //Calling on the array - given a starting diameter of 125px and can expand out to 1200px
       //Creating a circle
       let x = r * cos(i);
       let y = r * sin(i)
