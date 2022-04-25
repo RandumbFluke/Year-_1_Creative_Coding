@@ -13,7 +13,8 @@ function drawshape_speaker(){
   pop(); //Restore to 'default' settings
 
   //Vol, diam, diam2 & diam3 are variables
-  let vol = amp.getLevel(); //Returns an amplitude reading when called - amplitude is a number between 0 and 1, however I have maxed the sound to 0.3 so that is the highest the amplitude reading can go
+  let vol = amp.getLevel();
+  console.log(vol); //Returns an amplitude reading when called - amplitude is a number between 0 and 1, however I have maxed the sound to 0.3 so that is the highest the amplitude reading can go
   //Maps the range of the volume (0-0.25 in this case) and the volume will correspond with the diameter of the object
   let diam = map(vol, 0, 0.25, 100, 200); //This states the starting object will be 100px and can increase up to 200px
   let diam2 = map(vol, 0, 0.25, 80, 180); //This states the starting object will be 80px and can increase up to 180px
